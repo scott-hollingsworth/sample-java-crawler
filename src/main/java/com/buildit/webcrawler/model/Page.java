@@ -10,8 +10,8 @@ public class Page {
     private List<String> externalLinks;
     private List<String> images;
 
-    public Page() {
-        this.uri = "";
+    public Page(String url) {
+        this.uri = url;
         this.internalLinks = new ArrayList<>();
         this.externalLinks = new ArrayList<>();
         this.images = new ArrayList<>();
@@ -21,31 +21,15 @@ public class Page {
         return uri;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
-
     public List<String> getInternalLinks() {
         return internalLinks;
-    }
-
-    public void setInternalLinks(List<String> internalLinks) {
-        this.internalLinks = internalLinks;
     }
 
     public List<String> getExternalLinks() {
         return externalLinks;
     }
 
-    public void setExternalLinks(List<String> externalLinks) {
-        this.externalLinks = externalLinks;
-    }
-
     public List<String> getImages() {
         return images;
-    }
-
-    public void setImages(List<String> images) {
-        this.images = images;
     }
 }
