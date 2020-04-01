@@ -43,10 +43,10 @@ public class Crawler {
 
                     if (!visited.contains(href)) {
                         if (host.equals(new URI(href).getHost())) {
-                            page.getInternalLinks().add(href);
+                            page.addInternalLink(href);
                             toVisit.add(href);
                         } else {
-                            page.getExternalLinks().add(href);
+                            page.addExternalLink(href);
                             visited.add(href);
                         }
                     }
@@ -56,7 +56,7 @@ public class Crawler {
                         String src = image.attr("src");
 
                         if (!pageImages.contains(src)) {
-                            pageImages.add(src);
+                            page.addImage(src);
                         }
                     }
                 }
