@@ -67,7 +67,7 @@ public class Crawler {
     }
 
     private String formatLink(String linkToFormat) throws URISyntaxException {
-        URI link = new URI(linkToFormat);
+        URI link = new URI(linkToFormat.replace(" ", "%20"));
 
         return link.getScheme() + "://" + link.getHost() + link.getPath();
     }
