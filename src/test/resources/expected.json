@@ -1,0 +1,22 @@
+{
+  "uri": "http://www.test-site.com",
+  "internalLinks": [
+    "http://www.test-site.com/articles/1",
+    "http://www.test-site.com/comments/1",
+    "http://www.test-site.com/articles/2",
+    "http://www.test-site.com/comments/2",
+    "http://www.test-site.com/web-design.html",
+    "http://www.test-site.com/contact.html"
+  ],
+  "externalLinks": [
+    "http://www.google.com",
+    "http://www.yahoo.com",
+    "http://www.digg.com",
+    "http://www.reddit.com",
+    "http://www.test-site.net",
+    "http://some-other-site.com/contacts"
+  ],
+  "images": [
+    "assets/9303928202.jpg"
+  ]
+}
