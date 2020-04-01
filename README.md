@@ -47,8 +47,8 @@ Once done, please make your solution available on Github and forward the link. W
 ## What you need to share with us
 * A working crawler as per requirements above
 * An updated README.md explaining:
-* Reasoning and describe any trade offs
-* Explanation of what could be done with more time
+    * Reasoning and describe any trade offs
+    * Explanation of what could be done with more time
 * Project builds / runs / tests as per instruction
 
 Good luck and thank you for your time - we look forward to seeing your creation.
@@ -59,3 +59,19 @@ Good luck and thank you for your time - we look forward to seeing your creation.
 ## Running the app
 1. Run with the command `./gradlew clean bootrun`
 1. Test the endpoint with `curl http://localhost:8080/crawl?url=<-- url to be crawled>`
+
+## Implementation Reasoning
+* Used the Jsoup library for:
+    * Fetching webpages 
+    * Internal processing
+* Kept track of pages visited using internal list
+* Used Que to determine pages that still needed visiting
+
+## Tradeoffs
+* Opinionated implementation using Jsoup
+* Married to dependencies chosen
+
+## Future Inhancements
+* Refactor and clean code
+* Isolate dependencies (Jsoup), allowing easier swapping of approaches 
+* Implement better error handling
