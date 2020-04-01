@@ -62,16 +62,17 @@ Good luck and thank you for your time - we look forward to seeing your creation.
 
 ## Implementation Reasoning
 * Used the Jsoup library for:
-    * Fetching webpages 
+    * Fetching web pages 
     * Internal processing
 * Kept track of pages visited using internal list
 * Used Que to determine pages that still needed visiting
 
-## Tradeoffs
+## Trade-offs
 * Opinionated implementation using Jsoup
 * Married to dependencies chosen
 
-## Future Inhancements
+## Future Enhancements
 * Refactor and clean code
 * Isolate dependencies (Jsoup), allowing easier swapping of approaches 
 * Implement better error handling
+* Add multithreading
