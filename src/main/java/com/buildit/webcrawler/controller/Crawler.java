@@ -4,7 +4,8 @@ import com.buildit.webcrawler.dao.WebDao;
 import com.buildit.webcrawler.model.Page;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,8 @@ import java.util.Set;
 
 @RestController
 public class Crawler {
+
+    Logger logger = LoggerFactory.getLogger(Crawler.class);
 
     @Autowired
     private WebDao webDao;
@@ -62,6 +65,8 @@ public class Crawler {
                 }
             }
         }
+
+        logger.info("Visited: {}", visited);
 
         return page;
     }
